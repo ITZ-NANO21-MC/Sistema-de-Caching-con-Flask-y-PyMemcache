@@ -34,7 +34,7 @@ brew install memcached python
 ### 2. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/flask-pymemcache-caching.git
+git clone https://github.com/ITZ-NANO21-MC/Sistema-de-Caching-con-Flask-y-PyMemcache
 cd flask-pymemcache-caching
 ```
 
