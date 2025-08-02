@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caché con pymemcache</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Caché con PyMemcache</h1>
+        <p class="subtitle">Implementación con manejo binario de datos y serialización</p>
+    </header>
+    
+    <main class="container">
+        <section class="card">
+            <h2>Operación Pesada</h2>
+            <div class="input-group">
+                <label for="param">Parámetro (puede contener caracteres especiales):</label>
+                <input type="text" id="param" placeholder="Ej: español áéíóúñ" value="español áéíóúñ">
+            </div>
+            <button id="run-operation">Ejecutar Operación</button>
+            
+            <div class="result-box">
+                <h3>Resultado:</h3>
+                <div id="operation-result"></div>
+            </div>
+        </section>
+        
+        <section class="card">
+            <h2>Datos de Usuario</h2>
+            <div class="input-group">
+                <label for="user-id">ID de Usuario:</label>
+                <input type="number" id="user-id" placeholder="Ej: 42" value="42">
+            </div>
+            <button id="get-user">Obtener Usuario</button>
+            
+            <div class="result-box">
+                <h3>Datos del Usuario:</h3>
+                <div id="user-result"></div>
+            </div>
+        </section>
+        
+        <section class="card">
+            <h2>Gestión de Caché</h2>
+            <p>Limpia toda la caché almacenada en Memcached:</p>
+            <button id="clear-cache" class="btn-danger">Limpiar Toda la Caché</button>
+            <div id="cache-status" class="cache-status"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Sistema de caché con Flask y PyMemcache | Implementación con manejo binario</p>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
